@@ -14,17 +14,13 @@ var numFrames = duration * 24;
 var startTime = process.argv[4];
 var frameTimes = [];
 
-var newTime = startTime;
-
-/*for (var i = 0; i < numFrames; i = i + 1) {
-  newTime = newTime + 0.416;
-}*/
-
+var newTime = parseFloat(startTime);
 
 for (var i = 0; i < numFrames; i = i + 1) {
-  frameTimes[i] = newTime;
-}
+  newTime = newTime + 0.416;
 
+  frameTimes[i] = newTime.toString();
+}
 
 var ffmpegInstance = new ffmpeg({
   source: movie
