@@ -26,7 +26,7 @@ for (var i = 0; i < numFrames; i = i + 1) {
 }
 
 
-var process = new ffmpeg({
+var ffmpegInstance = new ffmpeg({
   source: movie
 }).withSize('99%')
   .takeScreenshots({
