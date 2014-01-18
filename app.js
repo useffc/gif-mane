@@ -26,16 +26,15 @@ for (var i = 0; i < numFrames; i = i + 1) {
 }
 
 
-var proc = new ffmpeg({
-  source: movie })
-  .withSize('99%')
+var process = new ffmpeg({
+  source: movie
+}).withSize('99%')
   .takeScreenshots({
     count: numFrames,
     timemarks: frameTimes,
-    filename: '%b_shot_%000i'},
-    'shots',
-    function(err, filenames) {
-      if (err) throw err;
-      console.log('screenshots saved');
-      console.log(filenames);
-     });
+    filename: '%b_shot_%000i'
+  }, 'shots', function(err, filenames) {
+    if (err) throw err;
+    console.log('screenshots saved');
+    console.log(filenames);
+  });
