@@ -8,12 +8,3 @@ it uses node, ffmpeg, imagemagick, and some other stuff that i'll detail later.
 - pngquant on each file for optimization, THEN convert.
 
 it's cool.
-
-
-structure
----------
-
-
-|gif mane
-|--app.js
-|--?
