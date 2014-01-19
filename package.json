@@ -2,6 +2,7 @@
   "name": "gif-mane",
   "version": "0.0.1",
   "private": true,
+  "author": "useff",
   "scripts": {
     "start": "node app.js"
   },

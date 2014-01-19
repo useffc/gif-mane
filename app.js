@@ -7,7 +7,7 @@ var processor = require('./processor');
 
 app.use(express.bodyParser({keepExtensions: true, uploadDir: process.cwd() + '/movies'}));
 
-
+app.use('/gif', express.static(__dirname + '/gif'));
 
 app.get('/', function(request, response) {
   response.render('index.html');
