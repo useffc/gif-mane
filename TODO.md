@@ -1,12 +1,12 @@
 to do
 -----
 
-
+- give uploaded file a fairly meaningful name
 - determine and display overall progress (progress bar).
 - display file name and file size
-- upload files.
-
--handle http requests.
+- give url for created gif
+- wipe shots directory
+- wipe gifs directory?
 
 
 
