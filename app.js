@@ -35,7 +35,7 @@ app.post('/upload', function(request, response) {
   movieToGif(request.files.movie.path, '1', '0', function(filename){
     //in the future this should grab the port number from the server instance
     response.render('upload.html', {
-      url: request.host + ':3000' + '/' + filename,
+      url: 'http://' + request.host + ':3000' + '/' + filename,
       size: 0});
   });
 });
