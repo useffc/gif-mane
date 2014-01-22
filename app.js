@@ -4,26 +4,6 @@ var express = require('express');
 var app = express();
 var processor = require('./processor');
 
-
-app.use(express.bodyParser({keepExtensions: true, uploadDir: process.cwd() + '/movies'}));
-
-app.use('/gif', express.static(__dirname + '/gif'));
-
-app.get('/', function(request, response) {
-  response.render('index.html');
-});
-
-app.post('/upload', function(request, response) {
-  movieToGif(request.files.movie.path, '1', '0', function(filename){
-    response.send(filename);
-  });
-});
-
-app.engine('html', require('hogan-express'));
-
-app.listen(3000);
-console.log('listening on 3000');
-
 //define movie variables & argument vectors.
 
 var movieToGif = function(movieFile, duration, startTime, callback) {
@@ -36,3 +16,32 @@ var movieToGif = function(movieFile, duration, startTime, callback) {
 
   processor(movieFile, duration, startTime, callback);
 };
+
+
+//bodyparser. upload movie file to `./movies`.
+app.use(express.bodyParser({keepExtensions: true, uploadDir: process.cwd() + '/movies'}));
+
+
+//define `./gif` directory.
+app.use('/gif', express.static(__dirname + '/gif'));
+
+//render `index.html` as root route.
+app.get('/', function(request, response) {
+  response.render('index.html');
+});
+
+//define `/upload` as post route.
+app.post('/upload', function(request, response) {
+  movieToGif(request.files.movie.path, '1', '0', function(filename){
+    //in the future this should grab the port number from the server instance
+    response.render('upload.html', {
+      url: request.host + ':3000' + '/' + filename,
+      size: 0});
+  });
+});
+
+app.engine('html', require('hogan-express'));
+
+app.listen(3000);
+console.log('listening on 3000');
+
