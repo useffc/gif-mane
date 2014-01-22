@@ -20,7 +20,9 @@ var movieToGif = function(movieFile, duration, startTime, callback) {
 
 //bodyparser. upload movie file to `./movies`.
 //size limit set to 200 MB.
-app.use(express.bodyParser({keepExtensions: true, uploadDir: process.cwd() + '/movies', limit: '200mb'}));
+app.use(express.bodyParser({keepExtensions: true,
+                           uploadDir: process.cwd() + '/movies',
+                           limit: '200mb'}));
 
 
 //define `./gif` directory.
