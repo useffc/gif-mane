@@ -5,9 +5,14 @@ to do
 - determine and display overall progress (progress bar).
 - display file name and file size
 - wipe gifs directory?
+- add start and duration controls
+- add speed controls
 
 
 
 
+to do - desktop
+---------------
 
-- get it running in the browser.
+- set size limit reasonably high (gigabytes)
+
