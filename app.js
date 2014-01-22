@@ -27,6 +27,7 @@ console.log('listening on 3000');
 //define movie variables & argument vectors.
 
 var movieToGif = function(movieFile, duration, startTime, callback) {
+  // takes argvs as well
   movieFile = movieFile || process.argv[2];
   duration = duration || process.argv[3];
 

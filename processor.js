@@ -46,6 +46,16 @@ module.exports = function(movieFile, duration, startTime, callback) {
           console.log(data);
           console.log('gif saved');
           callback(gifFileName);
+          fs.readdir('./shots/', function(err, filenames) {
+                    if (err) throw err;
+                    console.log(filenames);
+                    var shotsContents = filenames.length;
+                    for (var i=0; i < shotsContents; i= i+1) {
+                      fs.unlink('./shots/' + filenames[i], function(err) {
+                               if (err) throw err;
+                      });
+                    }
+          });
         }
       );
     });

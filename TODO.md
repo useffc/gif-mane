@@ -5,7 +5,6 @@ to do
 - determine and display overall progress (progress bar).
 - display file name and file size
 - give url for created gif
-- wipe shots directory
 - wipe gifs directory?
 
 
