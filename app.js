@@ -25,6 +25,10 @@ app.use(express.bodyParser({keepExtensions: true,
                            limit: '200mb'}));
 
 
+
+// define views directory
+app.use('/views', express.static(__dirname + '/views'));
+
 //define `./gif` directory.
 app.use('/gif', express.static(__dirname + '/gif'));
 

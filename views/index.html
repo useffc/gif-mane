@@ -1,8 +1,17 @@
 <html>
+  <head>
+    <link rel="stylesheet" href="/views/style.css" type="text/css">
+  </head>
   <body>
-    <form action='/upload' enctype='multipart/form-data' method='post'>
-      <input name='movie' type='file' value='choose file'>
-      <input type='submit'>
+    <form class='upload' action='/upload' enctype='multipart/form-data' method='post'>
+      <label class='choose'>
+        Choose a file
+        <input name='movie' type='file' value='choose file'>
+      </label>
+      <label class='send'>
+        Upload
+        <input type='submit'>
+      </label>
     </form>
   </body>
 </html>
