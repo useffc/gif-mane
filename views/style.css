@@ -1,22 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+
+body {
+  margin: 0;
+}
+
+.logo {
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-family: 'Cardo', serif;
+}
+
+
 .upload {
-  position: absolute;
+  position: relative;
   display: block;
   margin: 0 auto;
-  top: 50%;
+  top: 25%;
   left: 50%;
   height: 100px;
   width: 500px;
   margin-left: -250px;
   margin-top: -50px;
-  background-color: green;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 1px;
 }
 
 
 .choose {
-  background-color: red;
   position: relative;
-  left: 0;
-  margin: 20px;
+  background-color: #E75D5D;
+  width: 200px;
+  padding: 20px;
+  float: left;
 }
 
 
@@ -28,8 +48,10 @@
 
 .send {
   position: relative;
-  right: 0;
+  float: right;
   background-color: blue;
+  width: 200px;
+  padding: 20px;
 }
 
 .send [type=submit] {
