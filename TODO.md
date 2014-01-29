@@ -12,6 +12,11 @@ back-end
 - add speed controls
 - fix crash when upload is chosen and no file is selected.
 
+AJAX
+-----
+- trigger change in selection element when file is chosen
+- render progress bar when upload initiates
+
 
 front-end
 ---------
@@ -19,6 +24,8 @@ front-end
 - design forms – select and submit
 - design progress bar
 - design upload success file retrieval page
+- design peanut butter jar
+- particle anims in js
 
 
  desktop

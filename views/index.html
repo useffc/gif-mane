@@ -3,17 +3,17 @@
     <link rel="stylesheet" href="/views/style.css" type="text/css">
   </head>
   <body>
-    <section class="logo">
-      Gif Mane
+    <section id="logo">
+      <h1>Gif Mane</h1>
     </section>
 
     <form class='upload' action='/upload' enctype='multipart/form-data' method='post'>
       <label class='choose'>
-        Choose a file
+        <span class='buttonlabel'>Choose a file</span>
         <input name='movie' type='file' value='choose file'>
       </label>
       <label class='send'>
-        Upload
+        <span class='buttonlabel'> Upload</span>
         <input type='submit'>
       </label>
     </form>
