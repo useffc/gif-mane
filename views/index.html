@@ -8,12 +8,13 @@
     </section>
 
     <form class='upload' action='/upload' enctype='multipart/form-data' method='post'>
-      <label class='choose'>
-        <span class='buttonlabel'>Choose a file</span>
+      <label class='choose button'>
+        <!--this span needs to reflect that a file has been chosen using templating -->
+        <span>Choose a file</span>
         <input name='movie' type='file' value='choose file'>
       </label>
-      <label class='send'>
-        <span class='buttonlabel'> Upload</span>
+      <label class='send button'>
+        <span>Upload</span>
         <input type='submit'>
       </label>
     </form>
